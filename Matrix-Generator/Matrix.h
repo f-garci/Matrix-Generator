@@ -14,7 +14,6 @@ public:
 	void multiply(double, int);
 	friend std::ostream& operator<<(std::ostream&, const Matrix&);
 private:
-	int dimensions;
 	std::vector<std::vector<double>> nums;
 };
 

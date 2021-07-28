@@ -1,9 +1,7 @@
 #include "Matrix.h"
-#include <cmath>
 
 Matrix::Matrix(int dim)
 {
-	dimensions = dim;
 	for (int i = 0; i < dim; i++) 
 	{
 		nums.push_back({});
