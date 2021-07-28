@@ -8,12 +8,14 @@
 class Matrix {
 public:
 	Matrix(int);
+	Matrix(std::vector<std::vector<double>>);
 	void add(int, int);
 	void subtract(int, int);
+	void multiply(double, int);
 	friend std::ostream& operator<<(std::ostream&, const Matrix&);
 private:
 	int dimensions;
-	std::vector<std::vector<int>> nums;
+	std::vector<std::vector<double>> nums;
 };
 
 #endif

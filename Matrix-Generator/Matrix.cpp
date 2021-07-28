@@ -15,6 +15,11 @@ Matrix::Matrix(int dim)
 	}
 }
 
+Matrix::Matrix(std::vector<std::vector<double>> matrix)
+{
+	nums = matrix;
+}
+
 void Matrix::add(int row1, int row2)
 {
 	for (int i = 0; i < nums[row2 - 1].size(); i++)
@@ -28,6 +33,14 @@ void Matrix::subtract(int row1, int row2)
 	for (int i = 0; i < nums[row2 - 1].size(); i++)
 	{
 		nums[row2 - 1][i] -= nums[row1 - 1][i];
+	}
+}
+
+void Matrix::multiply(double val, int row)
+{
+	for (int i = 0; i < nums[row - 1].size(); i++)
+	{
+		nums[row - 1][i] *= val;
 	}
 }
 
