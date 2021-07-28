@@ -11,7 +11,7 @@ public:
 	friend std::ostream& operator<<(std::ostream&, const Matrix&);
 private:
 	int dimensions;
-	std::vector<int> nums;
+	std::vector<std::vector<int>> nums;
 };
 
 #endif

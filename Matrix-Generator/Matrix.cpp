@@ -4,8 +4,14 @@
 Matrix::Matrix(int dim)
 {
 	dimensions = dim;
-	for (int i = 0; i < pow(dim, 2); i++) {
-		nums.push_back(0);
+	for (int i = 0; i < dim; i++) 
+	{
+		nums.push_back({});
+
+		for (int j = 0; j < dim; j++)
+		{
+			nums[i].push_back(0);
+		}
 	}
 }
 
@@ -13,14 +19,12 @@ std::ostream& operator<<(std::ostream& os, const Matrix& m)
 {
 	for (int i = 0; i < m.nums.size(); i++) 
 	{
-		if (i != 0 && (i + 1) % m.dimensions == 0) 
+		for (int j = 0; j < m.nums[0].size(); j++)
 		{
-			os << m.nums[i] << "\n";
+			os << m.nums[i][j];
 		}
-		else 
-		{
-			os << m.nums[i];
-		}
+
+		os << "\n";
 	}
 
 	return os;
