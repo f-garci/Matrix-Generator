@@ -8,6 +8,8 @@
 class Matrix {
 public:
 	Matrix(int);
+	void add(int, int);
+	void subtract(int, int);
 	friend std::ostream& operator<<(std::ostream&, const Matrix&);
 private:
 	int dimensions;
