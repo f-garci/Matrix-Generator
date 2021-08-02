@@ -13,6 +13,7 @@ public:
 	void subtract(int, int);
 	void multiply(double, int);
 	friend std::ostream& operator<<(std::ostream&, const Matrix&);
+	friend bool operator==(const Matrix&, const Matrix&);
 private:
 	std::vector<std::vector<double>> nums;
 };

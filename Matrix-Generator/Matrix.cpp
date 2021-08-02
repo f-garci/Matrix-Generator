@@ -57,3 +57,16 @@ std::ostream& operator<<(std::ostream& os, const Matrix& m)
 
 	return os;
 }
+
+bool operator==(const Matrix& x, const Matrix& y)
+{
+	for (int i = 0; i < x.nums.size(); i++) 
+	{
+		if (x.nums[i] != y.nums[i]) 
+		{
+			return false;
+		}
+	}
+
+	return true;
+}
